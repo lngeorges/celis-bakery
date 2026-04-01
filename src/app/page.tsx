@@ -8,6 +8,16 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-32 h-32 bg-cream-200 rounded-full -translate-x-16 -translate-y-16 opacity-50"></div>
         <div className="absolute bottom-0 right-0 w-40 h-40 bg-gold-400 rounded-full translate-x-16 translate-y-16 opacity-10"></div>
         
+        {/* Baker graphic in upper left */}
+        <div className="absolute top-4 left-4 w-24 h-24 md:w-32 md:h-32 z-20">
+          <Image 
+            src="/baker.png" 
+            alt="Celi, the baker" 
+            fill
+            className="object-contain"
+          />
+        </div>
+        
         <div className="relative z-10">
           <h2 className="text-3xl md:text-5xl font-serif text-burgundy-900 mb-6 font-bold">
             Home-baked treats from Celi's own kitchen
