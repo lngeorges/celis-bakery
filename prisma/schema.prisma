@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. Product Table (The Bakery Case)
+model Product {
+  id                 String       @id @default(cuid())
+  name               String
+  batch              Int          // Minimum quantity that can be ordered
+  productPrice       Float        // Base price the customer pays for one Batch
+  priceBreakQuantity Int?         // Threshold number of Batches where a discount applies
+  priceBreakDiscount Float?       // Percentage reduction in price
+  
+  recipeItems        RecipeItem[]
+  
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+}
+
+// 2. Ingredient Table (The Pantry Shelves)
+model Ingredient {
+  id                       String       @id @default(cuid())
+  name                     String
+  cost                     Float        // What the bakery pays for the Ingredient Minimum
+  ingredientMinimum        Float        // Absolute base unit (in grams) of the smallest amount
+  ingredientPurchaseMeasure String      // Unit of measure used when buying in bulk (e.g., "pounds")
+  ingredientPurchaseQuantity Float      // The minimum in the purchase measure
+  
+  recipeItems              RecipeItem[]
+  
+  createdAt                DateTime     @default(now())
+  updatedAt                DateTime     @updatedAt
+}
+
+// 3. Recipe Item Table (The Mixing Bowl / Join Table)
+model RecipeItem {
+  id               String     @id @default(cuid())
+  
+  productId        String
+  product          Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+  
+  ingredientId     String
+  ingredient       Ingredient @relation(fields: [ingredientId], references: [id], onDelete: Cascade)
+  
+  measure          Float      // Absolute base unit (in grams) required for one Batch
+  recipeMeasure    String     // Human-readable unit of measure (e.g., "cups")
+  recipeMeasureQty Float      // The measure converted to the recipe measure
+  
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  @@unique([productId, ingredientId])
+}
