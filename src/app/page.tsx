@@ -13,10 +13,10 @@ export default function Home() {
             Home-baked treats from Celi's own kitchen
           </h2>
           <p className="text-lg text-burgundy-700 max-w-2xl mx-auto italic mb-8">
-            Welcome to our artisanal bakery, inspired by classic French techniques and made with love.
+            Everything from Celi's Bakery is made-to-order with clean, healthy products and lots of love.
           </p>
           <a href="/products" className="inline-block bg-burgundy-700 text-cream-50 px-8 py-3 rounded-md hover:bg-burgundy-900 transition-colors uppercase tracking-wider font-semibold shadow-md border border-burgundy-900">
-            View the Bakery Case
+            What can Celi make for you?
           </a>
         </div>
       </section>
