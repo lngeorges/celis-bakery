@@ -24,30 +24,115 @@ export default function Home() {
       <section>
         <div className="text-center mb-12">
           <h3 className="text-3xl font-serif text-wood-900 inline-block relative">
-            Featured Bakes
+            What would you like Celi make for you?
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-1 bg-gold-500"></div>
           </h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Placeholder Gallery Items */}
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
-              <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
-                {/* Simulated image placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-serif italic text-xl">Photo {item}</span>
-                </div>
-              </div>
-              <div className="p-6 bg-white">
-                <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Artisan Pastry {item}</h4>
-                <p className="text-wood-800 text-sm mb-4 leading-relaxed">A delicious baked good made with the finest ingredients from our pantry.</p>
-                <div className="flex justify-between items-center pt-4 border-t border-cream-100">
-                  <span className="font-semibold text-burgundy-700">$24.00 / dozen</span>
-                </div>
+          {/* Row 1, Col 1: Celi's Story */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200">
+            <div className="p-6 bg-white">
+              <h4 className="font-serif text-xl text-burgundy-900 mb-4 font-semibold">Celi's Story</h4>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">
+                Welcome to my kitchen! I'm Araceli, but everyone calls me Celi. I grew up baking alongside my grandmother in Mexico, learning the traditional techniques that have been in our family for generations.
+              </p>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">
+                After moving to the US, I missed the flavors of home. So I started baking for my friends and neighbors — and the word spread. Now I'm thrilled to share my creations with you!
+              </p>
+              <p className="text-wood-800 text-sm leading-relaxed">
+                Every item is made with love, using recipes passed down through generations and the finest ingredients I can find.
+              </p>
+            </div>
+          </div>
+
+          {/* Row 1, Col 2: Bread */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
+                <span className="font-serif italic text-xl">Bread Photo</span>
               </div>
             </div>
-          ))}
+            <div className="p-6 bg-white">
+              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Bread</h4>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">Artisanal breads baked fresh daily with traditional techniques.</p>
+              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
+                <span className="font-semibold text-burgundy-700">From $8.00</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 1, Col 3: Muffins and Scones */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
+                <span className="font-serif italic text-xl">Muffins & Scones Photo</span>
+              </div>
+            </div>
+            <div className="p-6 bg-white">
+              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Muffins and Scones</h4>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">Sweet and savory muffins and scones made with fresh fruits and quality ingredients.</p>
+              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
+                <span className="font-semibold text-burgundy-700">From $3.50 each</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2, Col 1: Talk to Celi */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200">
+            <div className="p-6 bg-white">
+              <h4 className="font-serif text-xl text-burgundy-900 mb-4 font-semibold">Talk to Celi</h4>
+              <div className="space-y-4">
+                <div className="border-b border-cream-200 pb-3">
+                  <p className="text-wood-800 text-sm italic mb-2">"The conchas are absolutely divine! Reminds me of my grandmother's kitchen."</p>
+                  <p className="text-burgundy-700 text-xs">— Maria S.</p>
+                </div>
+                <div className="border-b border-cream-200 pb-3">
+                  <p className="text-wood-800 text-sm italic mb-2">"Best birthday cake ever. My kids loved it!"</p>
+                  <p className="text-burgundy-700 text-xs">— The Garcia Family</p>
+                </div>
+                <div>
+                  <p className="text-wood-800 text-sm italic mb-2">"The pan de muerto was perfect for Dia de los Muertos. Thank you Celi!"</p>
+                  <p className="text-burgundy-700 text-xs">— Teresa R.</p>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-cream-100">
+                <p className="text-burgundy-700 text-xs">💬 Have a testimonial? Send me a message!</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2, Col 2: Cookies */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
+                <span className="font-serif italic text-xl">Cookies Photo</span>
+              </div>
+            </div>
+            <div className="p-6 bg-white">
+              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Cookies</h4>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">Classic cookies with a twist — from snickerdoodles to Mexican wedding cookies.</p>
+              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
+                <span className="font-semibold text-burgundy-700">From $2.00 each</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2, Col 3: Pastries */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
+                <span className="font-serif italic text-xl">Pastries Photo</span>
+              </div>
+            </div>
+            <div className="p-6 bg-white">
+              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Pastries</h4>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">French-inspired pastries including croissants, danishes, and more.</p>
+              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
+                <span className="font-semibold text-burgundy-700">From $4.00 each</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
