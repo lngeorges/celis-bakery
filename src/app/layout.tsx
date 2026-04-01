@@ -19,17 +19,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-cream-50 text-wood-900`}>
+        {/* Baker image at very top, outside header */}
+        <div className="container mx-auto px-4 pt-4">
+          <div className="flex justify-start items-start">
+            <div className="w-20 h-20 md:w-24 md:h-24 relative flex-shrink-0">
+              <Image 
+                src="/baker.png" 
+                alt="Celi, the baker" 
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
         <header className="border-b border-cream-200">
           <div className="container mx-auto px-4 py-6">
             <div className="flex justify-between items-center mb-6">
-              <div className="w-24 h-24 relative flex-shrink-0">
-                <Image 
-                  src="/baker.png" 
-                  alt="Celi, the baker" 
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              <div className="w-10"></div>
               <h1 className="text-4xl font-serif font-bold text-center text-burgundy-900">Celi's Bakery</h1>
               <div className="w-10 text-right text-burgundy-700">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline-block hover:text-burgundy-900 transition-colors">
