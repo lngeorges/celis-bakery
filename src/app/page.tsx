@@ -107,10 +107,13 @@ export default function Home() {
 
           {/* Row 2, Col 2: Cookies */}
           <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
-            <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
-                <span className="font-serif italic text-xl">Cookies Photo</span>
-              </div>
+            <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden">
+              <Image 
+                src="/cookies.jpg" 
+                alt="Fresh baked cookies" 
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
             <div className="p-6 bg-white">
               <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Cookies</h4>
