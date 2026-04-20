@@ -1,7 +1,5 @@
 tsimport type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  turbopack: {},
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
