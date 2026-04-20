@@ -7,20 +7,23 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 // 1. Product Table (The Bakery Case)
 model Product {
   id                 String       @id @default(cuid())
-  name               String
-  batch              Int          // Minimum quantity that can be ordered
-  productPrice       Float        // Base price the customer pays for one Batch
-  priceBreakQuantity Int?         // Threshold number of Batches where a discount applies
+  name               String       @unique
+  category           String
+  description        String?
+  batch              Int          // Units produced per recipe batch
+  productPrice       Float        // Selling price per unit
+  priceBreakQuantity Int?         // Minimum quantity that qualifies for a discount
   priceBreakDiscount Float?       // Percentage reduction in price
-  
+  bakeTime           Int          // Estimated minutes to bake one batch
+  isAvailable        Boolean      @default(true)
+
   recipeItems        RecipeItem[]
-  
+
   createdAt          DateTime     @default(now())
   updatedAt          DateTime     @updatedAt
 }
