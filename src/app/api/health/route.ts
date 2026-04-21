@@ -1,6 +1,8 @@
 import { prisma } from '@/lib/prisma';
 import { handleApiError } from '@/lib/api';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     await prisma.$queryRaw`SELECT 1`;

@@ -21,6 +21,7 @@ model Product {
   priceBreakDiscount Float?       // Percentage reduction in price
   bakeTime           Int          // Estimated minutes to bake one batch
   isAvailable        Boolean      @default(true)
+  notes              String?      // Internal baker notes, not shown publicly
 
   recipeItems        RecipeItem[]
 
@@ -31,11 +32,12 @@ model Product {
 // 2. Ingredient Table (The Pantry Shelves)
 model Ingredient {
   id                       String       @id @default(cuid())
-  name                     String
+  name                     String       @unique
   cost                     Float        // What the bakery pays for the Ingredient Minimum
   ingredientMinimum        Float        // Absolute base unit (in grams) of the smallest amount
   ingredientPurchaseMeasure String      // Unit of measure used when buying in bulk (e.g., "pounds")
   ingredientPurchaseQuantity Float      // The minimum in the purchase measure
+  lowStockThreshold        Int          @default(0)
   
   recipeItems              RecipeItem[]
   
@@ -56,9 +58,61 @@ model RecipeItem {
   measure          Float      // Absolute base unit (in grams) required for one Batch
   recipeMeasure    String     // Human-readable unit of measure (e.g., "cups")
   recipeMeasureQty Float      // The measure converted to the recipe measure
+  notes            String?    // Internal notes for this recipe line
   
-  createdAt        DateTime   @default(now())
-  updatedAt        DateTime   @updatedAt
+  createdAt                DateTime   @default(now())
+  updatedAt                DateTime   @updatedAt
 
   @@unique([productId, ingredientId])
+}
+
+// 4. Admin and Auth Tables (for NextAuth v5)
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?   // Hashed password
+  role          String    @default("ADMIN")
+  accounts      Account[]
+  sessions      Session[]
+
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  @db.Text
+  access_token       String?  @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
 }

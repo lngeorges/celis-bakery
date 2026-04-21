@@ -1,6 +1,8 @@
 import { prisma } from '@/lib/prisma';
 import { handleApiError, parseNumber, parseString, readJsonBody } from '@/lib/api';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const ingredients = await prisma.ingredient.findMany({
