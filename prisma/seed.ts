@@ -1,6 +1,14 @@
 import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-const prisma = new PrismaClient();
+const connectionString = process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error("DATABASE_URL is not configured.");
+}
+
+const adapter = new PrismaPg({ connectionString });
+const prisma = new PrismaClient({ adapter });
 
 const INGREDIENTS = [
   { name: "All-Purpose Flour", cost: 4.99, ingredientMinimum: 125, ingredientPurchaseMeasure: "5 lb bag", ingredientPurchaseQuantity: 10000, lowStockThreshold: 0 },
