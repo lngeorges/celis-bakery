@@ -30,7 +30,7 @@ export default function RootLayout({
             {/* Logo — pinned to the far left */}
             <div className="flex-shrink-0">
               <img
-                src="/logo.png"
+                src="/baker.png"
                 alt="Celi's Bakery"
                 className="h-24 w-auto block"
               />
