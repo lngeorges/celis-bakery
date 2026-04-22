@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Maps the 'font-caveat' Tailwind class to the CSS variable set in layout.tsx
-        caveat: ["var(--font-caveat)", "cursive"],
+        // Maps 'font-playfair' class to the CSS variable set in layout.tsx
+        playfair: ["var(--font-playfair)", "Georgia", "serif"],
       },
       colors: {
         cream: {
