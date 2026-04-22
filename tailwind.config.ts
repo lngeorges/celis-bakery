@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // This maps the 'font-caveat' class to the CSS variable defined in layout.tsx
+        // Maps the 'font-caveat' Tailwind class to the CSS variable set in layout.tsx
         caveat: ["var(--font-caveat)", "cursive"],
       },
       colors: {
@@ -22,4 +22,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
