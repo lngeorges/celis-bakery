@@ -32,13 +32,19 @@ export default function Home() {
             <div className="p-6 bg-white">
               <h4 className="font-serif text-xl text-burgundy-900 mb-4 font-semibold">Celi's Story</h4>
               <p className="text-wood-800 text-sm mb-4 leading-relaxed">
-                Welcome to my kitchen! I'm Araceli, but everyone calls me Celi. I grew up baking alongside my grandmother in Mexico, learning the traditional techniques that have been in our family for generations.
+                Hi, I'm Araceli.  Welcome to my kitchen!
               </p>
               <p className="text-wood-800 text-sm mb-4 leading-relaxed">
-                After moving to the US, I missed the flavors of home. So I started baking for my friends and neighbors — and the word spread. Now I'm thrilled to share my creations with you!
+                My family has always loved breadd.  When I started making sourdough during the pandemic, I realized I could give them the bread they loved, but without the extra sugar, bleached flour, and seed oils.
               </p>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">
+                Sourdough bread led to sandwich bread...then cookies...then muffins, scones, bagels....
+              </p>
+              <p className="text-wood-800 text-sm mb-4 leading-relaxed">
+                Take a look around, and let me know what you would like to try.  If you don't see what you're looking for, let me know.  I love to try new things!
+              </p> 
               <p className="text-wood-800 text-sm leading-relaxed">
-                Every item is made with love, using recipes passed down through generations and the finest ingredients I can find.
+                What can I make for you?
               </p>
             </div>
           </div>
@@ -54,7 +60,7 @@ export default function Home() {
               />
             </div>
             <div className="p-6 bg-white">
-              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Bread</h4>
+              <h4 className="font-serif italic text-xl text-burgundy-900 mb-2 font-semibold">Bread</h4>
               <p className="text-wood-800 text-sm mb-4 leading-relaxed">Artisanal breads baked fresh daily with traditional techniques.</p>
               <div className="flex justify-between items-center pt-4 border-t border-cream-100">
                 <span className="font-semibold text-burgundy-700">From $8.00</span>
@@ -65,9 +71,12 @@ export default function Home() {
           {/* Row 1, Col 3: Muffins and Scones */}
           <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
             <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
-                <span className="font-serif italic text-xl">Muffins & Scones Photo</span>
-              </div>
+              <Image 
+                src="/Mixed_muffins.jpg" 
+                alt="Muffins and scones" 
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
             <div className="p-6 bg-white">
               <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Muffins and Scones</h4>
@@ -113,7 +122,7 @@ export default function Home() {
               />
             </div>
             <div className="p-6 bg-white">
-              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Cookies</h4>
+              <h4 className="font-serif italic text-xl text-burgundy-900 mb-2 font-semibold">Cookies</h4>
               <p className="text-wood-800 text-sm mb-4 leading-relaxed">Classic cookies with a twist — from snickerdoodles to Mexican wedding cookies.</p>
               <div className="flex justify-between items-center pt-4 border-t border-cream-100">
                 <span className="font-semibold text-burgundy-700">From $2.00 each</span>
@@ -124,9 +133,12 @@ export default function Home() {
           {/* Row 2, Col 3: Pastries */}
           <div className="bg-white rounded-lg overflow-hidden shadow-md border border-cream-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
             <div className="aspect-[4/3] bg-cream-100 relative overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center text-burgundy-500 bg-cream-200 group-hover:scale-105 transition-transform duration-500">
-                <span className="font-serif italic text-xl">Pastries Photo</span>
-              </div>
+              <Image 
+                src="/Peach_cobbler.png" 
+                alt="Pastries" 
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
             <div className="p-6 bg-white">
               <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Pastries</h4>
