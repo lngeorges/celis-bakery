@@ -35,7 +35,7 @@ export default function Home() {
                 Hi, I'm Araceli.  Welcome to my kitchen!
               </p>
               <p className="text-wood-800 text-sm mb-4 leading-relaxed">
-                My family has always loved breadd.  When I started making sourdough during the pandemic, I realized I could give them the bread they loved, but without the extra sugar, bleached flour, and seed oils.
+                My family has always loved bread.  When I started making sourdough during the pandemic, I realized I could give them the bread they loved, but without the extra sugar, bleached flour, and seed oils.
               </p>
               <p className="text-wood-800 text-sm mb-4 leading-relaxed">
                 Sourdough bread led to sandwich bread...then cookies...then muffins, scones, bagels....
@@ -61,10 +61,6 @@ export default function Home() {
             </div>
             <div className="p-6 bg-white">
               <h4 className="font-serif italic text-xl text-burgundy-900 mb-2 font-semibold">Bread</h4>
-              <p className="text-wood-800 text-sm mb-4 leading-relaxed">Artisanal breads baked fresh daily with traditional techniques.</p>
-              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
-                <span className="font-semibold text-burgundy-700">From $8.00</span>
-              </div>
             </div>
           </div>
 
@@ -79,11 +75,7 @@ export default function Home() {
               />
             </div>
             <div className="p-6 bg-white">
-              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Muffins and Scones</h4>
-              <p className="text-wood-800 text-sm mb-4 leading-relaxed">Sweet and savory muffins and scones made with fresh fruits and quality ingredients.</p>
-              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
-                <span className="font-semibold text-burgundy-700">From $3.50 each</span>
-              </div>
+              <h4 className="font-serif itaic text-xl text-burgundy-900 mb-2 font-semibold">Muffins and Scones</h4>
             </div>
           </div>
 
@@ -123,10 +115,6 @@ export default function Home() {
             </div>
             <div className="p-6 bg-white">
               <h4 className="font-serif italic text-xl text-burgundy-900 mb-2 font-semibold">Cookies</h4>
-              <p className="text-wood-800 text-sm mb-4 leading-relaxed">Classic cookies with a twist — from snickerdoodles to Mexican wedding cookies.</p>
-              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
-                <span className="font-semibold text-burgundy-700">From $2.00 each</span>
-              </div>
             </div>
           </div>
 
@@ -141,11 +129,7 @@ export default function Home() {
               />
             </div>
             <div className="p-6 bg-white">
-              <h4 className="font-serif text-xl text-burgundy-900 mb-2 font-semibold">Pastries</h4>
-              <p className="text-wood-800 text-sm mb-4 leading-relaxed">French-inspired pastries including croissants, danishes, and more.</p>
-              <div className="flex justify-between items-center pt-4 border-t border-cream-100">
-                <span className="font-semibold text-burgundy-700">From $4.00 each</span>
-              </div>
+              <h4 className="font-serif italic text-xl text-burgundy-900 mb-2 font-semibold">Pastries</h4>
             </div>
           </div>
         </div>
