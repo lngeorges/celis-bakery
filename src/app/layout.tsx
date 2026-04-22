@@ -24,7 +24,7 @@ export default function RootLayout({
         <header className="flex flex-row items-center justify-start p-6 gap-6 border-b border-gray-200 bg-white">
           {/* Logo at h-24 (96px) — approximately 150% of a standard 64px nav logo */}
           <img
-            src="/logo.png"
+            src="/baker.png"
             alt="Celi's Bakery"
             className="h-24 w-auto block"
           />
