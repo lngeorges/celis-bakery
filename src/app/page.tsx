@@ -85,16 +85,16 @@ export default function Home() {
               <h4 className="font-serif text-xl text-burgundy-900 mb-4 font-semibold">Talk to Celi</h4>
               <div className="space-y-4">
                 <div className="border-b border-cream-200 pb-3">
-                  <p className="text-wood-800 text-sm italic mb-2">"The conchas are absolutely divine! Reminds me of my grandmother's kitchen."</p>
-                  <p className="text-burgundy-700 text-xs">— Maria S.</p>
+                  <p className="text-wood-800 text-sm italic mb-2">"The best sourdough anyone has eve made.  Believe me, you've never tasted sourdough this good."</p>
+                  <p className="text-burgundy-700 text-xs">— DJT</p>
                 </div>
                 <div className="border-b border-cream-200 pb-3">
-                  <p className="text-wood-800 text-sm italic mb-2">"Best birthday cake ever. My kids loved it!"</p>
-                  <p className="text-burgundy-700 text-xs">— The Garcia Family</p>
+                  <p className="text-wood-800 text-sm italic mb-2">"The audacity of home-made bagels!"</p>
+                  <p className="text-burgundy-700 text-xs">— Barack O.</p>
                 </div>
                 <div>
-                  <p className="text-wood-800 text-sm italic mb-2">"The pan de muerto was perfect for Dia de los Muertos. Thank you Celi!"</p>
-                  <p className="text-burgundy-700 text-xs">— Teresa R.</p>
+                  <p className="text-wood-800 text-sm italic mb-2">"Dont tell Laura, but these chocolate chip cookies are way better than hers."</p>
+                  <p className="text-burgundy-700 text-xs">— Dubya</p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-cream-100">
